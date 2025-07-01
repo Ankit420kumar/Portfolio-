@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Portfolio</title>
+
+    <style>
+        
+        :root {
+            --primary-bg: #f5f7fa;
+            --primary-color: #22223b;
+            --accent: #4ea8de;
+            --accent-hover: #4361ee;
+            --nav-bg: #22223b;
+            --nav-link: #f5f7fa;
+            --nav-link-hover: #4ea8de;
+            --section-bg: #ffffff;
+            --card-bg: #e9ecef;
+            --shadow: 0 4px 24px rgba(34, 34, 59, 0.08);
+            --border-radius: 12px;
+            --gray: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: var(--nav-bg);
+            box-shadow: var(--shadow);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--nav-link);
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: var(--nav-link-hover);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+            border: none;
+            margin: 32px 0;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--accent);
+            
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 200px 0 200px 0;
+            align-items: center;
+        }
+
+        .firstSection div {
+            width: 120%;
+        }
+
+        .leftSection {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            padding: 20px;
+            /* border: solid red; */
+            /* border-radius: 10px; */
+        }
+
+        .rightSection {
+            display: flex;
+            justify-content: center;
+            margin: 0 20px;
+        }
+
+        .rightSection img {
+            width: 80%;
+            height: 80%;
+            /* border-radius: 400px; */
+            box-shadow: var(--shadow);
+            border: 2px solid var(--accent);
+            background: var(--card-bg);
+        }
+
+        .purple {
+            color: var(--accent-hover);
+        }
+
+        .gray {
+            color: var(--gray);
+        }
+
+        .secondSection {
+            max-width: 90vw;
+            margin: 0 auto;
+            padding: 30px 30px;
+            /* background: var(--section-bg); */
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .secondSection hr {
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+            border: none;
+        }
+
+        .secondSection .box {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            background: none;
+            margin: 3px 0;
+            gap: 2px;
+        }
+        .secondSection .vertical {
+            /* display: flex; */
+            flex-direction: column;
+            align-items: center;
+            min-height: 180px;
+            width: 1px;
+            background-color: var(--accent);
+            /* margin: auto 0; */
+            /* padding: 1px; */
+            position: relative;
+        }
+        .vertical-titel {
+            position: relative;
+            margin: 0px 0px 2px 20px;
+            top: 5px;
+            width: 120px;
+            color: var(--primary-color);
+            font-weight: 600;
+            background-color: #4ea8de;
+            border:solid;
+        }
+        /* Place footer after vertical-desc */
+        .vertical-desc {
+            
+            position: relative;
+            top: 10px;
+            width: 150px;
+            color: var(--gray);
+            font-size: small;
+            margin: 0px 0px 0px 20px;
+            /* border: solid black; */
+            /* background-color: gainsboro; */
+            margin-bottom: 4px; /* Add space after vertical-desc for footer */
+        }
+        footer{
+            /* position: relative; */
+            display: flex;
+            padding: 50px;
+            margin: 60px 0px;
+            background-color: rgb(117, 117, 186);
+            color:black;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* border: solid aquamarine; */
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .name{
+            font-size: 30px;
+        }
+        .Thank{
+            font-size: xxx-large ;
+        }
+        footer ul li {
+            color: var(--nav-link-hover);
+            font-size: 1.02rem;
+            margin: 2% auto;
+        }
+        .leftSection .buttons{
+            padding: 63px;
+        }
+        .leftSection .btn{
+            padding: 12px;
+            background: #4361ee;
+            color: white;
+            border: 2px solid black;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor:pinter;
+        }
+    
+    @media (max-width: 1200px) {
+        .firstSection {
+            flex-direction: column;
+            margin: 100px 0 100px 0;
+        }
+        .firstSection div {
+            width: 100%;
+        }
+        .rightSection img {
+            width: 60vw;
+            max-width: 350px;
+        }
+        .secondSection .box {
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+        }
+        .secondSection .vertical {
+            margin: 40px 0;
+        }
+    }
+
+    @media (max-width: 800px) {
+        nav {
+            flex-direction: column;
+            height: auto;
+            padding: 10px 0;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .firstSection {
+            margin: 60px 0 60px 0;
+        }
+        .leftSection {
+            font-size: 1.1rem;
+            padding: 10px;
+        }
+        .rightSection img {
+            width: 80vw;
+            max-width: 250px;
+        }
+        .secondSection {
+            padding: 15px 5px;
+        }
+        .vertical-titel, .vertical-desc {
+            width: 90vw;
+            max-width: 300px;
+        }
+        footer {
+            flex-direction: column;
+            margin: 40px 0 0 0;
+            padding: 10px;
+            text-align: center;
+        }
+        .footer ul {
+            padding: 0;
+        }
+        .Thank {
+            font-size: x-large;
+        }
+        .name {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        html {
+            font-size: 14px;
+        }
+        nav {
+            padding: 5px 0;
+        }
+        .firstSection {
+            margin: 30px 0 30px 0;
+        }
+        .leftSection .buttons {
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .leftSection .btn {
+            font-size: 16px;
+            padding: 8px;
+        }
+        .rightSection img {
+            width: 90vw;
+            max-width: 180px;
+        }
+        .vertical-titel, .vertical-desc {
+            width: 90vw;
+            max-width: 220px;
+            font-size: 0.95rem;
+        }
+        .secondSection {
+            padding: 8px 2px;
+        }
+        footer {
+             flex-direction: column;
+            margin: 40px 0 0 0;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            
+        }
+        .footer ul {
+            padding: 0;
+            font-size: 0.9rem;
+        }
+    }
+
+    </style>
+       
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ankit's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li> <a href="/">Home</a></li>
+                    <li> <a href="/">About</a></li>
+                    <li> <a href="/">Services</a></li>
+                    <li> <a href="/">Projects</a></li>
+                    <li> <a href="/">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <p>Hi, My name is <span class="purple">Ankit</span>
+                    and I am a Science enthuciast.
+                </p>
+                <p style="color: blueviolet;"><span id="element"></span>
+                </p>
+                 <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                    
+                </div>
+            </div>
+            
+            
+
+            <div class="rightSection">
+                <img src="IMG_20240819_013120.jpg" alt="Ankit's Image" style="width: 100%; height: auto;">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="gray"> What I have done so far</span>
+            <h3>Experincer</h3>
+
+            <div class="box">
+
+                <div class="vertical">
+                    <div class="vertical-titel">NIT Rourkela Studdent</div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aspernatur est reiciendis itaque
+                        corrupti, labore vel recusandae suscipit ipsam temporibus molestias, eligendi, asperiores soluta
+                        a delectus et eveniet error ipsa.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-titel">Member of cyborg </div>
+                    <div class="vertical-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur
+                        quaerat rem? Quas nam odio quod dolorem est illo exercitationem incidunt tempora quibusdam?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-titel">Model Rocketry Enthuciast</div>
+                    <div class="vertical-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates
+                        sequi adipisci, numquam, hic dignissimos aliquam maxime tenetur facere quisquam tempora dolorem
+                        nihil.</div>
+                </div>
+            </div>
+        </section>
+         
+       
+    </main>
+
+            </div>
+        </section>
+         
+       
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="name">Ankit's Portfolio</div>
+            <div class="Thank">Thank You For Visiting</div>
+            <div class="right">
+                <ul>
+                    <li> <a href="/">Home</a></li>
+                    <li> <a href="/">About</a></li>
+                    <li> <a href="/">Services</a></li>
+                    <li> <a href="/">Projects</a></li>
+                    <li> <a href="/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="text-center">
+                Copyright &#169; ankitsportfolio.com | All rights reserved
+            </div>
+        </div>
+    </footer>
+    
+   
+        
+        
+        
+        
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Studdent of NIT Rorkela.', 'Robotics Enthusiast.', 'Web Developer.', 'Modele Rocketry Enthusiast.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
